@@ -1,0 +1,50 @@
+python3 detect.py --weights yolov5s.pt --image 416 --conf 0.4 --source data/images --output data/output
+
+RuntimeError: Couldn't load custom C++ ops. This can happen if your PyTorch and torchvision versions are incompatible, or if you had errors while compiling torchvision from source. For further information on the compatible versions, check https://github.com/pytorch/vision#installation for the compatibility matrix. Please check your PyTorch version with torch.__version__ and your torchvision version with torchvision.__version__ and verify if they are compatible, and if not please reinstall torchvision so that it matches your PyTorch install.
+
+
+
+// Check detect.py files for a more details
+// Uses the new trained wallet class and runs inference on files in image folder
+// Results are exported to yolov5/runs/detect/exp#
+
+python3 detect.py --weights best.pt --source data/images
+
+NOTES:
+
+zedyolov5 does not work but 'yolov5' does
+
+//Note missing ps3 and wii remote. They do not exist in noetic
+ros-noetic-joystick-drivers/focal 1.15.1-1focal.20220927.013352 arm64
+  This metapackage depends on packages for interfacing common joysticks and human input devices with ROS.
+
+IP of KSU Laptop
+IP Address: 192.168.1.200
+Netmask: 255.255.255.0
+Gateway: 192.168.1.1
+
+IP Address: 192.168.1.100
+Netmask: 255.255.255.0
+Gateway: 192.168.1.1
+
+TODO:
+
+Fix running inference on saved videos.
+
+
+pip show torch
+torch: 1.13.0
+
+pip show torchvision
+torchvision: 0.14.0
+
+HOW TO RUN QGROUND COONTROL
+flatpak run --device=all org.mavlink.qgroundcontrol
+flatpak run --device=all org.mavlink.qgroundcontrol
+
+Serial for pixhawk
+48003A000A51353239333634
+
+SUBSYSTEM=="tty", ATTRS{serial}=="48003A000A51353239333634", SYMLINK+="pixhawk"
+
+

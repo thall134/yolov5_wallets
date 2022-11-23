@@ -1,0 +1,42 @@
+HOW TO RUN ZED
+
+open terminal
+cd /usr/local/zed/tools
+ls
+will show this:
+jetson_clocks.service  ZED_Depth_Viewer  ZED_Explorer  ZED_Sensor_Viewer
+ZED_Calibration        ZED_Diagnostic    ZEDfu         ZED_SVO_Editor
+
+./ZEDfu #will run spatial mapping after selecting 'live'
+
+cd catkin_ws roslaunch zed_rtabmap_example zed_rtabmap.launch
+
+
+
+
+HOW TO RUN ZED
+
+1st need to plug in ZED *first* and other webcam *second*
+
+open terminal
+
+cd /usr/local/zed/tools #takes you to directory 
+./ZEDfu #will run spatial mapping after selecting 'live'
+
+
+HOW TO RUN NEURAL NETWORK
+
+cd repos/yolov5 #goes to directory
+
+Modeling for detecting wallets in in .onnx format already, "wallet.onnx".
+There will be two python codes available to run
+
+detect.py #has the default yolov5.pt training graph for detecting other random things
+yolo_detect.py #edited version of detect.py with the correct weights and pointing to the right webcam
+
+python3 yolo_detect.py #important to use python3 instead of python, otherwise will not run
+
+
+
+
+
